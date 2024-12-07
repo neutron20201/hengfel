@@ -1,0 +1,23 @@
+ <!--
+    File: input.component.html
+    Author: Markó Dániel
+    Copyright: 2024, Markó Dániel
+    Group: 2024-25 SZOFT II/2/E
+    Date: 2024-12-07
+    Github: https://github.com/neutron20201
+    Licenc: GNU GPL
+    -->
+
+<div class="container">
+    <h1>Kör alapú henger felszínének számítása</h1>
+    <form (ngSubmit)="calculateSurfaceArea()">
+      <label for="radius">Sugár (r):</label>
+      <input type="number" id="radius" [(ngModel)]="radius" name="radius" required>
+      <label for="height">Magasság (h):</label>
+      <input type="number" id="height" [(ngModel)]="height" name="height" required>
+      <button type="submit">Számítás</button>
+    </form>
+    <div *ngIf="surfaceArea !== null">
+      <p>A henger felszíne: {{ surfaceArea }} négyzetcenti</p>
+    </div>
+  </div>
